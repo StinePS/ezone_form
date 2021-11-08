@@ -3,3 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #16152a;
+}
+
+/***************************** FONT FAMILIES *********************************/
+
+@font-face {
+  font-family: sharpiro;
+  src: url(fonts/sharpiro-bold.woff2);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: sharpiro;
+  src: url(fonts/sharpiro-regular.woff2);
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: uniform;
+  src: url(fonts/uniform-pro-con-medium.woff2);
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: uniform;
+  src: url(fonts/uniform-pro-con-black.woff2);
+  font-weight: bold;
+}
