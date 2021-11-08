@@ -1,4 +1,29 @@
+/* FORM PROGRESS BAR*/
+#form-progress {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-progress-indicator {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.form-progress-indicator.active {
+  background-color: greenyellow;
+}
+
 /* FORM CAROUSEL */
+@media (min-width: 768px) {
+  .container {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
+
 .carousel {
   position: relative;
   margin: auto;
@@ -27,15 +52,6 @@
 .prev:hover,
 .next:hover {
   background-color: rgba(59, 29, 126, 0.6);
-}
-
-.numbertext {
-  font-family: "Roboto", sans-serif;
-  color: #3b1d7e;
-  font-size: 1rem;
-  padding: 1rem;
-  position: absolute;
-  top: 0;
 }
 
 /* Fading animation */
