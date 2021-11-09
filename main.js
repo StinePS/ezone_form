@@ -1,4 +1,5 @@
 import "./style.scss";
+import "./data.json";
 // import { greetings } from "./modules/greeting";
 // console.log(greetings);
 
@@ -7,10 +8,11 @@ window.addEventListener("DOMContentLoaded", siteLoaded);
 function siteLoaded() {}
 
 const formPages = Array.from(document.getElementsByClassName("form-carousel"));
-formPages.forEach(function (formPage) {
+formPages.forEach((formPage) => {
   initCarousel(formPage);
 });
 
+// Carousel from https://www.w3schools.com/howto/howto_js_slideshow.asp
 function initCarousel(element) {
   let pageIndex = 1;
   updateFormPages();
@@ -33,12 +35,12 @@ function initCarousel(element) {
   const nextButton = element.querySelector(".next");
   const prevButton = element.querySelector(".prev");
 
-  nextButton.addEventListener("click", function () {
+  nextButton.addEventListener("click", () => {
     pageIndex++;
     updateFormPages();
   });
 
-  prevButton.addEventListener("click", function () {
+  prevButton.addEventListener("click", () => {
     pageIndex--;
     updateFormPages();
   });
