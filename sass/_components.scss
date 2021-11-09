@@ -2,7 +2,8 @@
 #form-progress {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 60vw;
 }
 
 .form-progress-indicator {
@@ -19,7 +20,7 @@
 /* FORM CAROUSEL */
 @media (min-width: 768px) {
   .container {
-    max-width: 80vw;
+    max-width: 60vw;
     margin: 0 auto;
   }
 }
