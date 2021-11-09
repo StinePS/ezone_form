@@ -8,28 +8,103 @@ body {
   background-color: #16152a;
 }
 
+form {
+  background-color: #3c1bcd;
+  margin: 5%;
+  padding: 2%;
+}
+
+fieldset {
+  border: none;
+  padding: 2%;
+}
+
+.header2 {
+  font-family: "uniformBold", sans-serif;
+  color: white;
+  font-size: 1.5em;
+}
+
+.header3 {
+  font-family: "uniform", sans-serif;
+  color: white;
+  font-size: 1em;
+}
+
+.header4 {
+  font-family: "uniform", sans-serif;
+  color: white;
+  font-size: 0.85em;
+}
+
+/*.hint {
+  font-family: "sharpiro", sans-serif;
+  font-size: 0.8em;
+  color: white;
+}*/
+
+.submitBtn {
+  font-family: "uniformBold", sans-serif;
+  background-color: #5be080;
+  color: #16152a;
+  padding: 5px;
+  border-radius: 30px;
+  height: 2em;
+  width: 60px;
+  margin: 1%;
+  border: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label :checked + span {
+  background-color: #ffb591;
+  color: #16152a;
+  font-family: "sharpiroBold", sans-serif;
+}
+
+label span {
+  display: inline-block;
+  background-color: white;
+  color: #16152a;
+  height: 2em;
+  width: 140px;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 30px;
+  margin: 1%;
+  font-family: "sharpiro", sans-serif;
+  font-size: 0.7em;
+}
+
 /***************************** FONT FAMILIES *********************************/
 
 @font-face {
-  font-family: sharpiro;
-  src: url(fonts/sharpiro-bold.woff2);
-  font-weight: bold;
+  font-family: "sharpiroBold";
+  src: url("sass/fonts/sharpiro-bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: sharpiro;
-  src: url(fonts/sharpiro-regular.woff2);
-  font-weight: medium;
+  font-family: "sharpiro";
+  src: url("sass/fonts/sharpiro-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: uniform;
-  src: url(fonts/uniform-pro-con-medium.woff2);
-  font-weight: medium;
+  font-family: "uniform";
+  src: url("sass/fonts/uniform-pro-con-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: uniform;
-  src: url(fonts/uniform-pro-con-black.woff2);
-  font-weight: bold;
+  font-family: "uniformBold";
+  src: url("sass/fonts/uniform-pro-con-black.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }

@@ -9,22 +9,26 @@
   <body>
     <form action="">
       <div class="carousel">
-        <legend>Sign up!</legend>
+        <legend class="header2">Sign up!</legend>
         <fieldset id="page1" class="fade">
-          <label for="gamertag">Gamertag</label>
-          <span class="hint">Your online alias</span>
+          <label class="header3" for="gamertag">Gamertag</label>
+          <span class="hint header4">Your online alias</span>
+          <br />
           <input id="gamertag" name="page1-tag" type="text" inputmode="text" enterkeyhint="done" required />
           <br />
-          <label for="email">E-mail</label>
+          <label class="header3" for="email">E-mail</label>
           <!-- <span class="hint">Your email adress</span> -->
+          <br />
           <input id="email" name="page1-email" type="email" inputmode="email" enterkeyhint="done" required />
           <br />
-          <label for="password">Password</label>
-          <span class="hint">Choose your password</span>
+          <label class="header3" for="password">Password</label>
+          <span class="hint header4">Choose your password</span>
+          <br />
           <input id="password" name="page1-password" type="password" inputmode="text" enterkeyhint="done" required />
           <br />
-          <label for="age">Age</label>
+          <label class="header3" for="age">Age</label>
           <!-- <span class="hint">Your age</span> -->
+          <br />
           <input id="age" name="page1-age" type="number" inputmode="numeric" enterkeyhint="done" required />
           <br />
           <!-- <a class="prev">Previous</a>
@@ -32,13 +36,15 @@
         </fieldset>
 
         <fieldset id="page2" class="fade">
-          <legend>Gaming habits</legend>
-          <label for="favourite">What is your favourite game?</label>
-          <span class="hint">Start typing</span>
+          <legend class="header2">Gaming habits</legend>
+          <label class="header3" for="favourite">What is your favourite game?</label>
+          <span class="hint header4">Start typing</span>
+          <br />
           <input id="favourite" name="page2-favourite" type="text" inputmode="text" enterkeyhint="done" required />
           <br />
-          <label for="gametypes">What type of game do you play? (choose up to 3)</label>
-          <span class="hint">Start typing</span>
+          <label class="header3" for="gametypes">What type of game do you play? (choose up to 3)</label>
+          <span class="hint header4">Start typing</span>
+          <br />
           <input id="gametypes" name="page2-gametypes" type="text" inputmode="text" enterkeyhint="done" required />
           <br />
           <!-- <a class="prev">Previous</a>
@@ -46,78 +52,114 @@
         </fieldset>
 
         <fieldset id="page3" class="fade">
-          <legend>Improvements</legend>
-          <span>Which areas would you like to improve?</span>
+          <legend class="header2">Improvements</legend>
+          <span class="header3">Which areas would you like to improve?</span>
           <br />
+          
+          <label for="communication">
           <input id="communication" name="page3-communication" type="checkbox" />
-          <label for="communication">Communication</label>
-          <br />
+          <span>Communication</span>
+          </label>
+          
+          <label for="handeye">
           <input id="handeye" name="page3-" type="checkbox" />
-          <label for="handeye">Hand-eye coordination</label>
-          <br />
+          <span>Hand-eye coordination</span>
+          </label>
+          
+          <label for="hearing">
           <input id="hearing" name="page3-hearing" type="checkbox" />
-          <label for="hearing">Hearing</label>
-          <br />
+          <span>Hearing</span>
+          </label>
+          
+          <label for="injuries">
           <input id="injuries" name="page3-injuries" type="checkbox" />
-          <label for="injuries">Injuries</label>
+          <span>Injuries</span>
+          </label>
           <br />
+          <label for="leadership">
           <input id="leadership" name="page3-leadership" type="checkbox" />
-          <label for="leadership">Leadership</label>
-          <br />
+          <span>Leadership</span>
+          </label>
+          
+          <label for="mindset">
           <input id="mindset" name="page3-mindset" type="checkbox" />
-          <label for="mindset">Mindset</label>
-          <br />
+          <span>Mindset</span>
+          </label>
+          
+          <label for="multitasking">
           <input id="multitasking" name="page3-multitasking" type="checkbox" />
-          <label for="multitasking">Multi-tasking</label>
-          <br />
+          <span>Multi-tasking</span>
+          </label>
+          
+          <label for="nutrition">
           <input id="nutrition" name="page3-nutrition" type="checkbox" />
-          <label for="nutrition">Nutrition</label>
+          <span>Nutrition</span>
+          </label>
           <br />
+          <label for="physiology">
           <input id="physiology" name="page3-physiology" type="checkbox" />
-          <label for="physiology">Physiology</label>
-          <br />
+          <span>Physiology</span>
+          </label>
+         
+          <label for="reaction">
           <input id="reaction" name="page3-reaction" type="checkbox" />
-          <label for="reaction">Reaction time</label>
-          <br />
+          <span>Reaction time</span>
+          </label>
+          
+          <label for="sleep">
           <input id="sleep" name="page3-sleep" type="checkbox" />
-          <label for="sleep">Sleep</label>
-          <br />
+          <span>Sleep</span>
+          </label>
+          
+          <label for="strategy">
           <input id="strategy" name="page3-strategy" type="checkbox" />
-          <label for="strategy">Strategy</label>
+          <span>Strategy</span>
+          </label>
           <br />
+          <label for="stress">
           <input id="stress" name="page3-stress" type="checkbox" />
-          <label for="stress">Stress</label>
-          <br />
+          <span>Stress</span>
+          </label>
+          
+          <label for="tactical">
           <input id="tactical" name="page3-tactical" type="checkbox" />
-          <label for="tactical">Tactical</label>
-          <br />
+          <span>Tactical</span>
+          </label>
+          
+          <label for="technology">
           <input id="technology" name="page3-technology" type="checkbox" />
-          <label for="technology">Technology</label>
-          <br />
+          <span>Technology</span>
+          </label>
+          
+          <label for="vision">
           <input id="vision" name="page3-vision" type="checkbox" />
-          <label for="vision">Vision</label>
+          <span>Vision</span>
+          </label>
           <!-- <a class="prev">Previous</a>
           <a class="next">Next</a> -->
         </fieldset>
 
         <fieldset id="page4" class="fade">
-          <legend>Lifestyle</legend>
-          <span>How many hours a day do you typically use on gaming?</span>
-          <span>0</span>
+          <legend class="header2">Lifestyle</legend>
+          <span class="header3">How many hours a day do you typically use on gaming?</span>
+          <br />
+          <span class="header4">0</span>
           <input id="align-range" name="page4-gaming" type="range" min="0" max="18" step="1.0" />
-          <label for="align-range">18 or more</label>
+          <label class="header4" for="align-range">18 or more</label>
           <br />
-          <span>How many hours do you typically sleep per day?</span>
-          <span>4 or less</span>
+          <span class="header3">How many hours do you typically sleep per day?</span>
+          <br />
+          <span class="header4">4 or less</span>
           <input id="align-range" name="page4-sleep" type="range" min="4" max="12" step="1.0" />
-          <label for="align-range">12 or more</label>
+          <label class="header4" for="align-range">12 or more</label>
           <br />
-          <label for="physical">How many hours per week do you use on light to heavy physical activity?</label>
+          <label class="header3" for="physical">How many hours per week do you use on light to heavy physical activity?</label>
           <!-- <span class="hint">Your age</span> -->
+          <br />
           <input id="physical" name="page4-physical" type="number" inputmode="numeric" enterkeyhint="done" required />
           <br />
           <!-- <a class="prev">Previous</a> -->
-          <button>Submit</button>
+          <button class="submitBtn">Submit</button>
         </fieldset>
       </div>
     </form>
