@@ -1,8 +1,13 @@
+// Grid for page 3 (Improvements)
+.grid-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  gap: 0.5rem;
+}
+
 @media (min-width: 768px) {
-  .grid-4 {
-    display: grid;
+  .grid-choices {
     grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    gap: 0.5rem;
   }
 }

@@ -1,3 +1,5 @@
+/********************************* GENERAL ************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,96 +8,157 @@
 
 body {
   background-image: url("background.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
   background-color: #16152a;
+}
+
+// Doesn't work in Safari, but OK in Firefox & perfectly in Chrome
+:root {
+  accent-color: #5be080;
 }
 
 form {
   background-color: #3c1bcd;
-  margin: 25vh auto auto auto;
+  margin: 2rem 1rem;
   padding: 2rem;
 }
 
 fieldset {
   border: none;
-  padding: 2%;
 }
 
-.header2 {
-  font-family: "uniformBold", sans-serif;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.header3 {
-  font-family: "uniform", sans-serif;
-  color: white;
-  font-size: 1rem;
-}
-
-.header4 {
-  font-family: "uniform", sans-serif;
-  color: white;
-  font-size: 0.85rem;
-}
-
-@media (min-width: 768px) {
-  .header2 {
-    font-size: 2rem;
-  }
-
-  .header3 {
-    font-size: 1.2rem;
-  }
-
-  .header4 {
-    font-size: 1rem;
+@media (min-width: 767px) {
+  body {
+    background-size: cover;
+    margin: 25vh auto auto auto;
   }
 }
 
-/*.hint {
+/********************************* FORM ************************************/
+
+:focus {
+  border: 2x solid #5be080;
+}
+
+::placeholder {
   font-family: "sharpiro", sans-serif;
-  font-size: 0.8em;
-  color: white;
-}*/
+  color: #3f3f50;
+  font-size: 0.8rem;
+}
 
-.submitBtn {
-  font-family: "uniformBold", sans-serif;
-  background-color: #5be080;
+input {
+  font-family: "sharpiro", sans-serif;
   color: #16152a;
-  padding: 5px;
-  border-radius: 30px;
-  height: 2em;
-  width: 60px;
-  margin: 1%;
-  border: none;
+  font-size: 0.8rem;
+}
+
+input:invalid:not(:placeholder-shown, :focus) {
+  border: 3px solid #f48d69;
+}
+
+input:invalid:not(:placeholder-shown, :focus) + .error {
+  opacity: 1;
+  visibility: visible;
+  height: 1rem;
+}
+
+.error {
+  font-family: "uniform", sans-serif;
+  color: #f48d69;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  transition: 0.3s ease;
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
-label :checked + span {
-  background-color: #ffb591;
-  color: #16152a;
-  font-family: "sharpiroBold", sans-serif;
+label {
+  display: inline-block;
 }
 
 label span {
   display: inline-block;
-  background-color: white;
-  color: #16152a;
-  height: 2em;
-  width: 11vw;
-  line-height: 2em;
-  text-align: center;
-  border-radius: 30px;
-  margin: 1%;
   font-family: "sharpiroBold", sans-serif;
   font-size: 0.8rem;
+  background-color: #f5f5f5;
+  color: #16152a;
+  text-align: center;
+  border-radius: 30px;
+  padding: 0.3rem 0;
+  width: 35vw;
 }
 
-/***************************** FONT FAMILIES *********************************/
+label :checked + span {
+  font-family: "sharpiroBold", sans-serif;
+  background-color: #ffb591;
+  color: #16152a;
+}
+
+label span:hover {
+  background-color: #ffb591;
+}
+
+@media (min-width: 767px) {
+  .error {
+    font-size: 1rem;
+  }
+
+  label span {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 1080px) {
+  .container {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+
+  label span {
+    width: 12vw;
+  }
+}
+
+/********************************* BUTTONS ************************************/
+
+nav {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.prev,
+.next,
+.submitBtn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: "uniformBold", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  background-color: #5be080;
+  color: #16152a;
+  border-radius: 30px;
+  border: none;
+  padding: 0.5rem 0;
+  width: 6rem;
+}
+
+.prev:hover,
+.next:hover,
+.submitBtn:hover {
+  background-color: #ffb591;
+}
+
+.hidden {
+  display: none;
+}
+/******************************* FONT FAMILIES *******************************/
 
 @font-face {
   font-family: "sharpiroBold";
@@ -123,4 +186,45 @@ label span {
   src: url("sass/fonts/uniform-pro-con-black.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+/************************************ FONTS ***********************************/
+
+.header2 {
+  font-family: "uniformBold", sans-serif;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.header3 {
+  font-family: "uniform", sans-serif;
+  color: #f5f5f5;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#form-page1 .header3 {
+  margin-top: 0.5rem;
+}
+
+.header4 {
+  font-family: "uniform", sans-serif;
+  color: #f5f5f5;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 1080px) {
+  .header2 {
+    font-size: 2rem;
+  }
+
+  .header3 {
+    font-size: 1.2rem;
+  }
+
+  .header4 {
+    font-size: 1rem;
+  }
 }
