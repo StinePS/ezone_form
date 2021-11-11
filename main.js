@@ -5,24 +5,28 @@ import "./data.json";
 
 const endpoint = "https://mainbase-7e6d.restdb.io/rest/ezone";
 const apikey = "617696f28597142da1745a37";
+const form = document.querySelector("form");
 
-window.addEventListener("load", (e) => {
-  document.querySelector("button.submitBtn").addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  //e.preventDefault();
     const data = {
-      gamertag: document.querySelector("#gamertag").value,
-      email: document.querySelector("#email").value,
-      password: document.querySelector("#password").value,
-      age: document.querySelector("#age").value,
-      favouriteGame: document.querySelector("#favourite").value,
-      gameGenres: document.querySelector("#gametypes").value,
-      improvement: document.querySelector('.improveCheckbox:checked').value,
-      hoursGaming: document.querySelector("#hoursGaming").value,
-      sleep: document.querySelector("#sleep").value,
-      activity: document.querySelector("#physical").value,
+      gamertag: form.elements.tag.value,
+      email: form.elements.email.value,
+      password: form.elements.password.value,
+      age: form.elements.age.value,
+      favouriteGame: form.elements.favourite.value,
+      gameGenres: form.elements.gametypes.value,
+      improvement: form.elements.value,
+      hoursGaming: form.elements.gaming.value,
+      sleep: form.elements.sleep.value,
+      activity: form.elements.physical.value,
     };
+    console.log(data);
     postData(data);
+
   });
-});
+  
+
 
 window.addEventListener("DOMContentLoaded", siteLoaded);
 
@@ -68,12 +72,13 @@ function initCarousel(element) {
 }
 
 function postData(data){
+  
   const postData = JSON.stringify(data);
-  fetch(endpoint, {
+  fetch("https://mainbase-7e6d.restdb.io/rest/ezone", {
   method: "post",
   headers: {
     "Content-Type": "application/json; charset=utf-8",
-    "x-apikey": apikey,
+    "x-apikey": "617696f28597142da1745a37",
     "cache-control": "no-cache"
   },
       body: postData
