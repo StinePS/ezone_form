@@ -10,6 +10,7 @@
     <div class="container">
       <form action="">
         <div class="form-carousel">
+          <progress class="form-progress-bar" min="0" max="100" value="0" step="33" aria-labelledby="form-progress-completion"></progress>
           <div id="form-progress">
             <div class="form-progress-indicator one active"></div>
             <div class="form-progress-indicator two"></div>
@@ -20,46 +21,80 @@
           <fieldset id="form-page1" class="form-page fade">
             <legend class="header2">Sign up!</legend>
             <label class="header3" for="gamertag">Gamertag</label>
+
             <span class="hint header4">Your online alias</span>
             <br />
             <input id="gamertag" name="tag" type="text"  inputmode="text" enterkeyhint="done" required />
+
             <br />
+            <input id="gamertag" name="page1-tag" type="text" minlength="3" inputmode="text" enterkeyhint="done" placeholder=" " required />
+            <div class="error" id="err-gamertag" aria-live="assertive">Your online alias must be at least 3 characters long</div>
             <label class="header3" for="email">E-mail</label>
+
             <!-- <span class="hint">Your email adress</span> -->
             <br />
             <input id="email" name="email" type="email"  inputmode="email" enterkeyhint="done" required />
+
             <br />
+            <input id="email" name="page1-email" type="email" inputmode="email" enterkeyhint="done" placeholder=" " required />
+            <div class="error" id="err-email" aria-live="assertive">Type in your email address</div>
             <label class="header3" for="password">Password</label>
+
             <span class="hint header4">Choose your password</span>
             <br />
             <input id="password" name="password" type="password"  inputmode="text" enterkeyhint="done" required />
+
             <br />
+            <input id="password" name="page1-password" type="password" minlength="6" inputmode="text" enterkeyhint="done" placeholder=" " required />
+            <div class="error" id="err-password" aria-live="assertive">Your password must be at least 6 characters long</div>
             <label class="header3" for="age">Age</label>
-            <!-- <span class="hint">Your age</span> -->
             <br />
+
             <input id="age" name="age" type="number" inputmode="numeric" enterkeyhint="done" required />
+
+            <input id="age" name="page1-age" type="number" inputmode="numeric" enterkeyhint="done" placeholder=" " required />
+            <div class="error" id="err-age" aria-live="assertive">Your age should be a number</div>
+
             <br />
           </fieldset>
 
           <fieldset id="form-page2" class="form-page fade">
             <legend class="header2">Gaming habits</legend>
-            <label class="header3" for="favourite">What is your favourite game?</label>
-            <span class="hint header4">Start typing</span>
+
+            <label class="header3" for="favourite" id="label-favourite">What is your favourite game?</label>
             <br />
+            <input type="text" id="favourite" enterkeyhint="done" placeholder="Start typing" required />
+            <br />
+
             <input id="favourite" name="favourite" type="text" inputmode="text" enterkeyhint="done" required />
+
+
+            <label class="header3" for="gametypes">What type of games do you play? (choose up to 3)</label>
             <br />
-            <label class="header3" for="gametypes">What type of game do you play? (choose up to 3)</label>
-            <span class="hint header4">Start typing</span>
+            <input id="gametypes" name="page2-gametypes" type="text" inputmode="text" enterkeyhint="done" placeholder="Start typing" required />
+
             <br />
-            <input id="gametypes" name="page2-gametypes" type="text" inputmode="text" enterkeyhint="done" required />
+            <label for="example1">
+              <input id="example1" name="example1" type="checkbox" />
+              <span class="example">MMORPG</span>
+            </label>
             <br />
+            <label for="example2">
+              <input id="example2" name="example2" type="checkbox" />
+              <span class="example"> RTS</span>
+            </label>
+            <br />
+            <label for="example3">
+              <input id="example3" name="example3" type="checkbox" />
+              <span class="example">Rhythm</span>
+            </label>
           </fieldset>
 
           <fieldset id="form-page3" class="form-page fade">
             <legend class="header2">Improvements</legend>
-            <span class="header3">Which areas would you like to improve?</span>
-            <br />
-            <div class="grid-4">
+            <div class="header3">Which areas would you like to improve?</div>
+
+            <div class="grid-choices">
               <label for="communication">
                 <input id="communication" class="improveCheckbox" value="communication" name="page3" type="checkbox" />
                 <span>Communication</span>
@@ -144,14 +179,14 @@
 
           <fieldset id="form-page4" class="form-page fade">
             <legend class="header2">Lifestyle</legend>
-            <span class="header3">How many hours a day do you typically use on gaming?</span>
+            <div class="header3">How many hours a day do you typically use on gaming?</div>
             <br />
             <span class="header4">0</span>
             <input id="hoursGaming" name="gaming" type="range" min="0" max="18" step="1.0" />
             <label class="header4" for="align-range">18 or more</label>
             <br />
-            <span class="header3">How many hours do you typically sleep per day?</span>
-            <br />
+            <div class="header3">How many hours do you typically sleep per day?</div>
+
             <span class="header4">4 or less</span>
             <input id="sleep" name="sleep" type="range" min="4" max="12" step="1.0" />
             <label class="header4" for="align-range">12 or more</label>
@@ -164,9 +199,9 @@
           </fieldset>
 
           <nav>
-            <a class="prev">Previous</a>
-            <a class="next">Next</a>
-            <button class="submitBtn">Submit</button>
+            <a class="prev hidden">&#10094; Previous</a>
+            <a class="next">Next &#10095;</a>
+            <button class="submitBtn hidden">Submit</button>
           </nav>
         </div>
       </form>

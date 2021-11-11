@@ -1,74 +1,69 @@
-/* FORM PROGRESS BAR*/
+/*************************** FORM PROGRESS BAR*******************************/
+
+// Inspired by https://codepen.io/carlinscuderi/pen/XmeyvV (jQuery)
 #form-progress {
-  position: relative;
   display: flex;
   justify-content: space-evenly;
-  width: 60vw;
+}
+
+progress {
+  display: block;
+  position: relative;
+  appearance: none;
+  background: #5be080;
+  width: 60%;
+  margin: auto;
+  height: 5px;
+  top: 1.1rem;
+  background: none;
+  transition: 1s;
+  will-change: contents;
 }
 
 .form-progress-indicator {
+  display: flex;
+  left: 0;
+  top: -5px;
   width: 2rem;
   height: 2rem;
-  background-color: white;
+  background: #f5f5f5;
+  border: 3px solid #ddd;
   border-radius: 50%;
-}
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.3s;
+  will-change: transform;
 
-.form-progress-indicator.active {
-  background-color: greenyellow;
-}
+  &.one {
+    left: 0;
+  }
+  &.two {
+    left: 33%;
+  }
+  &.three {
+    left: 66%;
+  }
+  &.four {
+    left: 100%;
+  }
 
-/* FORM CAROUSEL */
-@media (min-width: 768px) {
-  .container {
-    max-width: 60vw;
-    margin: 0 auto;
+  &.active {
+    animation: bounce 0.5s forwards;
+    animation-delay: 0.5s;
+    border: 4px solid #5be080;
   }
 }
+
+/***************************** FORM CAROUSEL *********************************/
 
 .carousel {
   position: relative;
   margin: auto;
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 1rem;
-  color: #3b1d7e;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(59, 29, 126, 0.6);
-}
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fade {
@@ -78,5 +73,39 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  #form-page1,
+  #form-page2,
+  #form-page4 {
+    margin-left: 6rem;
+  }
+}
+/***************************** COMBOBOX *********************************/
+
+.selected {
+  font-family: "sharpiroBold", sans-serif;
+  background-color: #f5f5f5;
+  color: #16152a;
+  font-size: 0.8rem;
+}
+
+// Styling of dropdown
+.example {
+  width: 30vw;
+  background-color: #ffb591;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 1080px) {
+  .container {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+
+  .example {
+    width: 12vw;
   }
 }
