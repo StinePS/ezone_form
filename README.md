@@ -1,6 +1,6 @@
 # ezone_form
 
-Assignment for KEA MMD 3rd Semester: Build a form for the client EZone with focus on getting a prototype ready for a pitch.
+Assignment for KEA MMD 3rd semester: Build a form for the client EZone with focus on getting a prototype ready for a pitch.
 
 Get as much as possible working and fake the rest!
 
