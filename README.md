@@ -13,4 +13,4 @@ Technical Requirements
 - Git, branches
 - Besides that, you are allowed (and encouraged) to use any other technologies and tools that you like.
 
-See the form here: ["https://pedantic-nightingale-876249.netlify.app/"]
+See the form on [Netlify]("https://pedantic-nightingale-876249.netlify.app/")
